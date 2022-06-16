@@ -1,0 +1,16 @@
+gradle.properties
+*.iml
+.gradletasknamecache
+.gradle
+.idea/
+build/
+proguard_logs/
+.classpath
+.project
+bin/
+gen/
+proguard/
+project.properties
+local.properties
+tests/AndroidManifest.xml
+android/build
