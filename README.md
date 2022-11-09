@@ -25,4 +25,4 @@ APICIA is a tool that analyzes the impact of updating the target API in Android 
 ## Datasets
 The datasets used in the conference paper published in COMPSAC2021 are available at [https://userweb.cs.txstate.edu/~t_m386/apicia.html](https://userweb.cs.txstate.edu/~t_m386/apicia.html)
 ## Extended evaluation (Will be updated)
-The dataset used in the extended evaluation are available [Here](https://userweb.cs.txstate.edu/~t_m386/apicia.html)
+The dataset used in the extended evaluation are available [here](https://docs.google.com/spreadsheets/d/1NQSVWmvY3ZBk4duBsuQl1EKctGucECb2XPnhvNtkUkc/edit?usp=sharing)
