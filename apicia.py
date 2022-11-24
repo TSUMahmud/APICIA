@@ -83,14 +83,14 @@ def save_sep_tests(tfiles):
 if __name__ == '__main__':
 	start_time = time.time();
 	#sourcePath = ""
-	appPath = "example/FAST/android/"
-	srcPath = appPath + "src/main/java"
-	TestsPath = appPath + "src/test/java"
-	coverage_report_path =  appPath + "build/reports/jacoco/jacocoUnitTestReport/html/"
+	appPath = sys.argv[1]
+	srcPath = appPath + sys.argv[2]
+	TestsPath = appPath + sys.argv[3]
+	coverage_report_path =  appPath + sys.argv[4]
 	testFiles =  get_files(TestsPath)
 
 	tests= save_sep_tests(testFiles)
-	os.system("python stats_old.py " + srcPath + " web_output.txt");
+	os.system("python stats_old.py " + srcPath + " aca_output.txt");
 	imp_methods = loadfile("stat_output.txt")
 	
 	print("Impacted methods:", len(list(set(imp_methods))));

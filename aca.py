@@ -136,7 +136,7 @@ if __name__ == "__main__":
 	# print (isinstance(sys.argv[1], str));
 	# app_dict = load_file(sys.argv[1]);
 #    print (app_dict);
-	inp = input("Enter api version:");
+	inp = sys.argv[1];
 	import time
 	start = time.time()
 	req = (check_api(inp));
@@ -151,7 +151,7 @@ if __name__ == "__main__":
 	end = time.time() - start;
 	print (end)
 	# save_file("web_output.txt", filtered_web_dict);
-	save_file("web_output.txt", unfiltered_web_dict);
+	save_file("aca_output.txt", unfiltered_web_dict);
 
 	# import pprint;
 	# pprint.pprint(filtered_web_dict);

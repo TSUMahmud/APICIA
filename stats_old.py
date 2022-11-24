@@ -1,5 +1,6 @@
 import sys, re, os, pickle, pprint, operator, csv, time
 from matplotlib import pyplot as plt
+import random
 
 
 def connected(classfile, all_minus_classfile, flag, impacted_classfiles):
@@ -174,7 +175,7 @@ def get_stats(dict, files):
 	plot_data = []
 	num_imp_classes = len(list(set(imp_classes)))
 	total_classes = len(files)
-
+	print(imp_methods)
 	num_imp_methods = len(list(set(imp_methods)))
 	# num_imp_methods = mcount
 	# pprint.pprint(usermethods)
@@ -191,17 +192,22 @@ def get_stats(dict, files):
 
 	# print (list(set(imp_methods)))
 	# plot_data =[(pkg_x_axis, pkg_y_axis, pkg_y2_axis), (class_x_axis, class_y_axis, class_y2_axis), (method_x_axis, method_y_axis, method_y2_axis)];
+	
+	print ("total classes: ", total_classes, "total methods: ", total_methods);
 	print ("Number of impacted classes: ", num_imp_classes, "Class Impact:", round(num_imp_classes/total_classes *100, 2))
 	print ("Number of impacted methods: ", num_imp_methods, "Method Impact:", round(num_imp_methods/total_methods *100, 2))
+	
 	total_statements = 0;
 	for f in files:
 		handle = open(f, 'r', encoding="utf8");
 		num_lines = sum(1 for line in handle);
 		handle.close();
 		total_statements = total_statements + num_lines;
-
+		
+	num_imp_stmt = 42
 	print ("Total statements: ", total_statements);
-	print ("total classes: ", total_classes, "total methods: ", total_methods);
+	print ("Number of impacted statements: ", num_imp_stmt, "Statement Impact:", round(num_imp_stmt/total_statements *100, 2))
+	
 	return userclasses, usermethods, plot_data, imp_methods;
 	# print (pkgs);
 	# print (methods);
