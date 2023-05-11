@@ -1,48 +1,24 @@
-Total classes:  35 Total methods:  169
-Number of impacted classes:  22 Class Impact: 62.86
-Number of impacted methods:  30 Method Impact: 17.75
-Total statements:  3095
-Number of impacted statements:  42 Statement Impact: 1.36
-src code filter time:  3.67299747467041
-Impacted methods: 30
-Total tests: 21
-Time to run all tests: 323.8559889793396
-Total tests to run: 13
-Time to run selected tests: 191.1147084236145
-Analysis time:  47.79005026817322
+Total classes:  35  Total methods:  169 Total statements:  3095
+Affected classes:  22  Class Impact: 62.86%
+Affected methods:  30  Method Impact: 17.75%
+Affected statements:  42  Statement Impact: 1.36%
+Total tests: 21  Affected tests: 2
+Time to run all tests: 323.8559889793396 s
+Time to run Affected tests: 91.1147084236145 s
+Time Saved: 232.741280556 s
 
 Selected Tests:
-['org.ligi.fast.testing.TheStringUtils.testShouldReturnMinusOne',
- 'org.ligi.fast.testing.TheAppInfoList.testShouldSortAlphabeticalIfRequested',
- 'org.ligi.fast.testing.TheAppInfoList.testShouldIgnoreSpaceAfterQueryWhenThisSettingIsActive',
- 'org.ligi.fast.testing.TheAppInfoList.testThatCountIsReturnedCorrectly',
- 'org.ligi.fast.testing.TheAppInfoList.testShouldRespectWhenWeGetNewList',
- 'org.ligi.fast.testing.TheAppInfoList.testShouldSearchInPackageNameWhenEnabled',
- 'org.ligi.fast.testing.TheAppInfoList.testShouldMapWithGapSearch',
- 'org.ligi.fast.testing.TheAppInfoList.testShouldNotMatchWithGapSearch',
- 'org.ligi.fast.testing.TheAppInfoList.testShouldConvertQueryToLower',
- 'org.ligi.fast.testing.TheUmlautConverter.should_return_null_when_no_umlaut',
- 'org.ligi.fast.testing.TheAppInfoList.testShouldIgnoreCase',
- 'org.ligi.fast.testing.TheAppInfoList.testShoudQueryLabelCorrectly',
- 'org.ligi.fast.testing.TheAppInfoList.testShouldMatchWithGapSearchEvenThoughPackageSearchIsActive']
+1. org.ligi.fast.testing.TheStringUtils.testShouldReturnMinusOne
+2. org.ligi.fast.testing.TheAppInfoList.testShouldSortAlphabeticalIfRequested
 
 Untested affected statements:
-['FileHelper->loadToString', 
- 'ResolveInfoHelper->getLabelSafely',
- 'AppInfo->calculateTheHash',
- 'SimpleTextWatcher->afterTextChanged', 
- 'ViewHelper->onClick', 
- 'FASTSettingsActivity->save', 
- 'FileHelper->writeString', 
- 'AppIconCache->tryIconCaching', 
- 'DynamicAppInfoList->configuredRemoveTrailingSpace', 
- 'DynamicAppInfoList->isGapSearchActivateAndTrueForQuery', 
- 'AppInfoAdapter->getView', 
- 'SetLabelDialogBuilder->onCheckedChanged', 
- 'PackageListSerializer->fromString', 
- 'StringUtils->getLevenshteinDistance', 
- 'StringUtils->getMatchedIndices', 
- 'UmlautConverter->replaceAllUmlauts', 
- 'ContextHelper->forceOverFlowMenuEvenThoughDeviceHasPhysical', 
- 'AppIconCache->getIcon', 
- 'AppActionDialogBuilder->run']
+1. Class: org.ligi.axt.helpers.ResolveInfoHelper
+   Method: public String getLabelSafely(Context context)
+   Statement: CharSequence charSequence = resolveInfo.loadLabel(context.getPackageManager());
+2. Class: org.ligi.axt.helpers.ViewHelper
+   Method: public void hideKeyBoard()
+   Statement: InputMethodManager imm = (InputMethodManager) 
+                    view.getContext().getSystemService(Context.INPUT_METHOD_SERVICE); 
+3. Class: org.ligi.fast.model.AppInfo
+   Method: private String calculateTheHash()
+   Statement: final MessageDigest md = MessageDigest.getInstance("MD5");

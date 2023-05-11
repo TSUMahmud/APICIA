@@ -143,13 +143,13 @@ if __name__ == "__main__":
 	if req == -1:
 		sys.exit(0);
 	pkgs = get_packages_classes(req);
-	print (pkgs);
+	# print (pkgs);
 
 	web_dict, pkg_url_list = add_package_to_dict(pkgs);
 	unfiltered_web_dict = get_classes(web_dict, pkg_url_list, inp);
 	# filtered_web_dict = filter_class_methods(unfiltered_web_dict, app_dict);
 	end = time.time() - start;
-	print (end)
+	print ("API Change Analysis Time: ", end)
 	# save_file("web_output.txt", filtered_web_dict);
 	save_file("aca_output.txt", unfiltered_web_dict);
 
