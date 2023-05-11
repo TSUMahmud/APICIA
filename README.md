@@ -16,10 +16,8 @@ APICIA is a tool that analyzes the impact of updating the target API in Android 
 ## How to run
 - If you do not have the requirements installed in python: run "pip install -r requirements.txt" to install all the requirements
 - Within the app, first identify the folder where the app code and the tests are localized, i.e., "android/src/main/java/" and "android/src/test/java/", where the Jacoco store its coverage reports, i.e., "android/build/reports/jacoco/jacocoUnitTestReport/html/" and the targetSDKVersion of the app which is 26 for this app.
-- To run: "python aca.py <--updated API level-->", i.e., "python aca.py 27"
-- Then run: "python apicia.py <--app path--> <--source code path--> <--test path--> <--Jacoco report path-->", i.e., "python apicia.py example/FAST/ android/src/main/java android/src/test/java android/build/reports/jacoco/jacocoUnitTestReport/html/"
+- To run: "python apicia.py <--app path--> <--source code path--> <--test path--> <--Jacoco report path--> <--API level to be updated-->", i.e., "python apicia.py example/FAST/ android/src/main/java android/src/test/java android/build/reports/jacoco/jacocoUnitTestReport/html/ 27"
 - The output will be shown in the console as well as saved in the "apicia_output.txt" file.
-
 
 ## Datasets
 The datasets used in the conference paper published in COMPSAC2021 are available at [https://userweb.cs.txstate.edu/~t_m386/apicia.html](https://userweb.cs.txstate.edu/~t_m386/apicia.html)
